@@ -12,7 +12,7 @@ const PROXY_URL = process.env.PROXY_URL;
 // 假设通过环境变量 INDEX 传入当前账号的序号 (如 1, 2) 默认是 1
 const ACCOUNT_INDEX = process.env.INDEX || '1';
 // 动态获取对应账号的 PLAN 环境变量，未找到则默认 16（即剩余小于等于16小时可续期）
-const PLAN = process.env['PLAN_' + ACCOUNT_INDEX] || process.env.PLAN || '16';
+const PLAN = process.env['PLAN_' + ACCOUNT_INDEX] || process.env.PLAN || '4';
 // 续期阈值直接取 PLAN 的值
 const RENEW_THRESHOLD = parseFloat(PLAN);
 
